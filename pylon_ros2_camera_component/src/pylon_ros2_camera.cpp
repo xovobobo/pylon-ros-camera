@@ -75,7 +75,7 @@ PYLON_CAM_TYPE detectPylonCamType(const Pylon::CDeviceInfo& device_info)
             {
                 std::string model_name(device_info.GetModelName());
 
-                if (model_name.compare(0, 3, "acA") == 0)
+                if ((model_name.compare(0, 3, "acA") == 0) || model_name.compare(0, 3, "avA") == 0)
                 {
                     return GIGE;
                 }
